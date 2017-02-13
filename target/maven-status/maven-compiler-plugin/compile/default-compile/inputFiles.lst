@@ -1,0 +1,10 @@
+/Users/liliana/dev/ServicesClient/src/main/java/com/github/lilicaway/services/client/rest/dto/base/BaseResponse.java
+/Users/liliana/dev/ServicesClient/src/main/java/com/github/lilicaway/services/client/rest/dto/breui/Block.java
+/Users/liliana/dev/ServicesClient/src/main/java/com/github/lilicaway/services/client/rest/dto/breui/BreUi.java
+/Users/liliana/dev/ServicesClient/src/main/java/com/github/lilicaway/services/client/rest/httpUtils/HttpGenericHandler.java
+/Users/liliana/dev/ServicesClient/src/main/java/com/github/lilicaway/services/client/rest/dto/base/ResponseType.java
+/Users/liliana/dev/ServicesClient/src/main/java/com/github/lilicaway/services/client/rest/httpUtils/RequestWithEntity.java
+/Users/liliana/dev/ServicesClient/src/main/java/com/github/lilicaway/services/client/BreServiceClientConfig.java
+/Users/liliana/dev/ServicesClient/src/main/java/com/github/lilicaway/services/client/rest/dto/breui/Field.java
+/Users/liliana/dev/ServicesClient/src/main/java/com/github/lilicaway/services/client/rest/dto/breui/Layout.java
+/Users/liliana/dev/ServicesClient/src/main/java/com/github/lilicaway/services/client/rest/service/BreService.java
