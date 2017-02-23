@@ -17,14 +17,15 @@
     <junit.version>4.12</junit.version>
     <guava.version>18.0</guava.version>
     <mockito.version>2.0.101-beta</mockito.version>
-    <spring.version>4.0.5.RELEASE</spring.version>
+    <spring.version>4.1.1.RELEASE</spring.version>
     <jdk.version>1.8</jdk.version>
     <jstl.version>1.2</jstl.version>
+    <jackson-annotations-version>2.8.0</jackson-annotations-version>
   </properties>
 
   <modules>
-    <module>example_web</module>
     <module>library</module>
+    <module>example_web</module>
   </modules>
 
   <dependencyManagement>
@@ -40,26 +41,58 @@
         <version>${jackson.version}</version>
       </dependency>
       <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>${jackson-annotations-version}</version>
+      </dependency>
+      <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
         <version>${guava.version}</version>
       </dependency>
-      <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+
+      <!-- Spring Core -->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-beans</artifactId>
         <version>${spring.version}</version>
       </dependency>
-      <dependency>
-        <groupId>org.mockito</groupId>
-        <artifactId>mockito-core</artifactId>
-        <version>${mockito.version}</version>
-        <scope>test</scope>
-      </dependency>
+
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-test</artifactId>
         <version>${spring.version}</version>
+        <scope>test</scope>
+      </dependency>
+
+      <!-- Mockito test -->
+      <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>${mockito.version}</version>
         <scope>test</scope>
       </dependency>
 
@@ -85,25 +118,20 @@
         <version>${junit.version}</version>
         <scope>test</scope>
       </dependency>
-
-      <!-- Spring Core -->
       <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-core</artifactId>
-        <version>${spring.version}</version>
+        <groupId>org.skyscreamer</groupId>
+        <artifactId>jsonassert</artifactId>
+        <version>1.3.0</version>
+        <scope>test</scope>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path -->
+      <dependency>
+        <groupId>com.jayway.jsonpath</groupId>
+        <artifactId>json-path</artifactId>
+        <version>0.9.1</version>
+        <scope>test</scope>
       </dependency>
 
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-web</artifactId>
-        <version>${spring.version}</version>
-      </dependency>
-
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-webmvc</artifactId>
-        <version>${spring.version}</version>
-      </dependency>
     </dependencies>
   </dependencyManagement>
 
