@@ -25,7 +25,6 @@ public class TestOpenWeatherServiceConfiguration {
   @Bean
   @Primary
   public OpenWeatherService getOpenWeatherService() {
-    System.out.println("getOpenWeatherService called");
     return Mockito.mock(OpenWeatherService.class);
   }
 }

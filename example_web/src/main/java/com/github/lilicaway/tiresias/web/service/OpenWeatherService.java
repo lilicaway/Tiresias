@@ -32,7 +32,6 @@ public class OpenWeatherService {
         .queryParam("q", cityName).queryParam("APPID", APP_ID);
 
     URI uri = builder.build().encode().toUri();
-    System.out.println("uri:" + uri);
     ResponseEntity<ResponseResult> responseEntity = restTemplate.exchange(
         uri, HttpMethod.GET, requestEntity, ResponseResult.class);
 
